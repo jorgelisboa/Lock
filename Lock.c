@@ -1,16 +1,16 @@
 #include <stdio.h>
+#define TAMANHO 22
 
 unsigned int tentativas = 0;
-unsigned int arraySize = 22; //Tamanho da array/senha
-unsigned int numerosVisiveis[arraySize];
-unsigned int numerosVerdadeiros[] = { //Tipo um hashmap/json quantidade:número
+unsigned int numerosVisiveis[TAMANHO];
+unsigned int numerosVerdadeiros[] = { //Tipo um hashmap/json número:quantidade
     0, 4,
     1, 7,
     5, 2,
     7, 1,
     9, 3
 };
-unsigned int senhaDigitada[22]; //Podem ser digitados 22 digitos
+unsigned int senhaDigitada[TAMANHO]; //Podem ser digitados 22 digitos
 
 int main() {
     printf("Bem vindo, insira sua senha para abrir o cofre!");
