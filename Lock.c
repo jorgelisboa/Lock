@@ -2,7 +2,7 @@
 #define TAMANHO 22
 
 unsigned int tentativas = 0;
-unsigned int numerosVisiveis[TAMANHO];
+unsigned int numerosVisiveis[20];
 unsigned int numerosVerdadeiros[] = { //Tipo um hashmap/json número:quantidade
     0, 4,
     1, 7,
@@ -21,7 +21,6 @@ int main() {
         {
             /* code */
         }
-
         
         
     }
