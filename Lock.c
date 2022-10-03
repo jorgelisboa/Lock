@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-unsigned int tentativas, deslizamentos = 0;
+unsigned int tentativas = 0;
 unsigned int arraySize = 22; //Tamanho da array/senha
 unsigned int numerosVisiveis[arraySize];
 unsigned int numerosVerdadeiros[] = { //Tipo um hashmap/json quantidade:número
@@ -15,12 +15,14 @@ unsigned int senhaDigitada[22]; //Podem ser digitados 22 digitos
 int main() {
     printf("Bem vindo, insira sua senha para abrir o cofre!");
 
-    while (tentativas < 5) //Looping de tentativas
+    while (tentativas < 3) //Looping de tentativas
     {
-        for (size_t i = 0; i < count; i++) //Loop de deslizamentos
+        for (unsigned int deslizamentos = 0; deslizamentos < 5; deslizamentos++) //Loop de deslizamentos
         {
             /* code */
         }
+
+        
         
     }
     
