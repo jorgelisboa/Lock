@@ -54,9 +54,9 @@ int main() {
 
             for (unsigned int i = 0; i < casaDesejada; i++) //Indo até a casa desejada e pegando cada valor que passou
             {
-                switch(numerosVisiveis[i]){
+                switch(numerosVisiveis[i]){ // O  número que passou, é o que eu preciso na minha senha?
                     case 0:
-                        senha[0] = (senha[0] - 1);
+                        senha[0] = (senha[0] - 1); //Se for, fala que peguei 1
                         break;
                     case 1:
                         senha[1] = (senha[1] - 1);
@@ -73,11 +73,6 @@ int main() {
                 }
                 fflush(stdout);
             }
-            /*
-            Pede a posição
-            Vai um por um até a posição
-            Contabiliza cada número
-            */
         }
         //Verifica se a senha está certa (todos são zero)
         if(
