@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #define TAMANHO 22
 
-unsigned int tentativas = 1;
 unsigned int numerosVisiveis[] = {
     0,
     1,
@@ -36,14 +35,10 @@ int main() {
     printf("Barra de números \n");
     fflush(stdout);
 
-    while (tentativas < 4) //Looping de tentativas
+    for (unsigned int tentativas = 0; tentativas < 3; tentativas++) //Looping de tentativas
     {
         for (unsigned int deslizamentos = 0; deslizamentos < 4; deslizamentos++) //Loop de deslizamentos
         {
-            if(deslizamentos > 0) {
-                    system("cls");
-            }
-
             //Printando a barra para o usuário
             for (unsigned int i = 0; i < 21; i++)
             {
@@ -84,23 +79,26 @@ int main() {
             Contabiliza cada número
             */
         }
-        for(int i = 0; i<5; i++){
-
-           printf("%i\n", senha[i]);
-           fflush(stdout);
+        //Verifica se a senha está certa (todos são zero)
+        if(
+            senha[0] == 0 && 
+            senha[1] == 0 && 
+            senha[2] == 0 && 
+            senha[3] == 0 && 
+            senha[4] == 0
+        ) {
+            tentativas = 3;
+        }
+        else { //Verifica s
+            if (tentativas == 2) {
+                printf("Cofre trancado, número de tentativas excedido");
+                fflush(stdout);
+            } else {
+                printf("%u/3 tentativas \n", tentativas+1);
+                fflush(stdout);
             }
-
-
-
-
-        printf("%u/3 tentativas \n", tentativas);
-        fflush(stdout);
-
-
-        tentativas++;
+        }
     }
-    printf("Cofre trancado, número de tentativas excedido");
-    fflush(stdout);
-
+    system("stop");
     return 0;
 }
